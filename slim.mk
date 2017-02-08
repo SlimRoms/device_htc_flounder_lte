@@ -13,9 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-$(call inherit-product, vendor/cm/config/telephony.mk)
+# Inherit some common Slim stuff.
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/flounder/aosp_flounder64.mk)
@@ -38,10 +37,6 @@ TARGET_OTA_ASSERT_DEVICE := flounder,flounder_lte
 PRODUCT_PACKAGES += \
 	com.android.nfc_extras
 
-# CM Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-	device/htc/flounder/overlay-cm
-
 # Inherrit LTE config
 $(call inherit-product, device/htc/flounder/device-lte.mk)
 $(call inherit-product-if-exists, vendor/htc/flounder_lte/device-vendor.mk)
@@ -56,7 +51,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="volantisg-user 7.1.1 NMF26Q 3623443 release-keys"
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_flounder_lte
+PRODUCT_NAME := slim_flounder_lte
 PRODUCT_DEVICE := flounder_lte
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 9
