@@ -13,9 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Base on flounder
-$(call inherit-product, device/htc/flounder/slim.mk)
-
 # Inherit some common SLIM stuff.
 $(call inherit-product, vendor/slim/config/telephony.mk)
 
