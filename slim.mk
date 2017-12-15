@@ -13,8 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Base on flounder
+$(call inherit-product, device/htc/flounder/slim.mk)
+
 # Inherit some common SLIM stuff.
-$(call inherit-product, vendor/slim/config/common_full_phone.mk)
+$(call inherit-product, vendor/slim/config/telephony.mk)
 
 # Assert for recovery compatibility
 TARGET_OTA_ASSERT_DEVICE := flounder,flounder_lte
